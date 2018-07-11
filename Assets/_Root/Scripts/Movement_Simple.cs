@@ -37,6 +37,9 @@ namespace TAAI
             {
                 transform.eulerAngles = new Vector3(0, camPivot.transform.eulerAngles.y - 90, 0);
             }
+
+            transform.Translate(Vector3.forward * speed * vertical * Time.deltaTime);
+            transform.Translate(Vector3.right * speed * horizontal * Time.deltaTime);
         }
     }
 }

@@ -4,38 +4,47 @@ using UnityEngine;
 
 public class Camera_Controls : MonoBehaviour {
 
+    public float camVel;
+    public GameObject player;
+    public GameObject camOffset;
+    public GameObject cam;
+    public LayerMask layerMask;
+    bool autoFocus;
 	// Use this for initialization
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKey(KeyCode.L)) // Horizontal +
+
+    private void Update()
+    {
+        RaycastHit hit;
+        if (Physics.Linecast(player.transform.position, camOffset.transform.position, out hit, layerMask))
         {
-            turnX(1);
+            cam.transform.position = hit.point;
+            Debug.DrawLine(player.transform.position, camOffset.transform.position, Color.red);
         }
-        else if (Input.GetKey(KeyCode.J)) // Horizontal -
+        else
         {
-            turnX(-1);
-        }
-        if (Input.GetKey(KeyCode.I)) // Vertical +
-        {
-            turnY(-1);
-        }
-        else if (Input.GetKey(KeyCode.K)) // Vertical -
-        {
-            turnY(1);
+            cam.transform.position = camOffset.transform.position;
+            Debug.DrawLine(player.transform.position, camOffset.transform.position, Color.green);
         }
     }
 
-    public void turnX(float vel)
-    {
-        transform.Rotate(Vector3.up * vel, Space.World);
-    }
+    void FixedUpdate () {
 
-    public void turnY(float vel)
-    {
-        transform.Rotate(Vector3.right * vel, Space.Self);
+        float RStick_H = Input.GetAxis("RStick_H");
+        float RStick_V = Input.GetAxis("RStick_V");
+
+        if (transform.forward.y >= 0.9 && RStick_V <= 0)
+        {
+            RStick_V = 0;
+        }
+        else if (transform.forward.y <= -0.9 && RStick_V >= 0)
+        {
+            RStick_V = 0;
+        }
+
+        transform.Rotate(Vector3.up * camVel * RStick_H * Time.deltaTime, Space.World);
+        transform.Rotate(Vector3.right * camVel * RStick_V * Time.deltaTime, Space.Self);
     }
 }
