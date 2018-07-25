@@ -42,8 +42,11 @@ namespace TAAI
 
 		public delegate void InputTemplate (int _id);
 
-		public InputTemplate AchievementHandler;
-		public InputTemplate DecalChangeHandler;
-		public InputTemplate DecalHandler;
-	}
+
+        public InputTemplate ShootHandler;
+        public InputTemplate ShootDownHandler;
+        public InputTemplate ShootUpHandler;
+        public InputTemplate ThrowHandler;
+        public InputTemplate SwitchWeaponHandler;
+    }
 }
