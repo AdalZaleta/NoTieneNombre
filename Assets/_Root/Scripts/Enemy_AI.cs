@@ -8,17 +8,20 @@ namespace TAAI
     public class Enemy_AI : MonoBehaviour
     {
         public GameObject player;
+        public float maxDistance;
         Vector3 OG_pos;
         NavMeshAgent agent;
-        bool canFollow;
+        bool canFollow = true;
+        bool gotTarget;
 
-        private void OnTriggerStay(Collider _col)
+        void OnTriggerEnter(Collider _col)
         {
-            if (_col.gameObject.CompareTag("player"))
+            if (_col.gameObject.CompareTag("Player"))
             {
                 if (canFollow)
                 {
-                    agent.destination = _col.transform.position;
+                    Debug.Log("PLAYER ENTERED");
+                    gotTarget = true;
                 }  
             }
         }
@@ -26,13 +29,29 @@ namespace TAAI
         void Start()
         {
             agent = GetComponent<NavMeshAgent>();
+            OG_pos = transform.position;
         }
 
         void Update()
         {
-            if (Vector3.Distance(transform.position, OG_pos) >= 20.0f)
+            Debug.Log("Distance from OG: " + Vector3.Distance(transform.position, OG_pos));
+            if (Vector3.Distance(transform.position, OG_pos) >= maxDistance)
             {
+                Debug.Log("TOO FAR");
                 agent.destination = OG_pos;
+                FollowCD(2.0f);
+                if (canFollow)
+                {
+                    gotTarget = false;
+                }
+            }
+            else
+            {
+                if (gotTarget)
+                {
+                    Debug.Log("FOLLOWING PLAYER");
+                    agent.destination = player.transform.position;
+                }
             }
         }
 
