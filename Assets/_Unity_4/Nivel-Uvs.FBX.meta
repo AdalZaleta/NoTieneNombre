@@ -1,0 +1,169 @@
+fileFormatVersion: 2
+guid: 4872fd4d3c07fcc4d8b1a2aff6eef410
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: G_Borde-Lago
+    100002: G_Borde-Lago001
+    100004: G_Pared-
+    100006: G_Pared-1
+    100008: G_Pared-3
+    100010: G_Pared-4
+    100012: G_Pared-5
+    100014: G_Pared-6
+    100016: G_Pared-7
+    100018: G_Paredes-habitacion
+    100020: G_Plano-cilindro
+    100022: G_Plano-cilindro001
+    100024: G_Plano-Techo1
+    100026: G_Suelo
+    100028: G_Suelo-Pasillo
+    100030: G_Suelo-Pasillo-2
+    100032: //RootNode
+    400000: G_Borde-Lago
+    400002: G_Borde-Lago001
+    400004: G_Pared-
+    400006: G_Pared-1
+    400008: G_Pared-3
+    400010: G_Pared-4
+    400012: G_Pared-5
+    400014: G_Pared-6
+    400016: G_Pared-7
+    400018: G_Paredes-habitacion
+    400020: G_Plano-cilindro
+    400022: G_Plano-cilindro001
+    400024: G_Plano-Techo1
+    400026: G_Suelo
+    400028: G_Suelo-Pasillo
+    400030: G_Suelo-Pasillo-2
+    400032: //RootNode
+    2100000: 'Material #3'
+    2300000: G_Borde-Lago
+    2300002: G_Borde-Lago001
+    2300004: G_Pared-
+    2300006: G_Pared-1
+    2300008: G_Pared-3
+    2300010: G_Pared-4
+    2300012: G_Pared-5
+    2300014: G_Pared-6
+    2300016: G_Pared-7
+    2300018: G_Paredes-habitacion
+    2300020: G_Plano-cilindro
+    2300022: G_Plano-cilindro001
+    2300024: G_Plano-Techo1
+    2300026: G_Suelo
+    2300028: G_Suelo-Pasillo
+    2300030: G_Suelo-Pasillo-2
+    3300000: G_Borde-Lago
+    3300002: G_Borde-Lago001
+    3300004: G_Pared-
+    3300006: G_Pared-1
+    3300008: G_Pared-3
+    3300010: G_Pared-4
+    3300012: G_Pared-5
+    3300014: G_Pared-6
+    3300016: G_Pared-7
+    3300018: G_Paredes-habitacion
+    3300020: G_Plano-cilindro
+    3300022: G_Plano-cilindro001
+    3300024: G_Plano-Techo1
+    3300026: G_Suelo
+    3300028: G_Suelo-Pasillo
+    3300030: G_Suelo-Pasillo-2
+    4300000: G_Pared-1
+    4300002: G_Pared-7
+    4300004: G_Pared-
+    4300006: G_Pared-5
+    4300008: G_Pared-4
+    4300010: G_Pared-3
+    4300012: G_Paredes-habitacion
+    4300014: G_Pared-6
+    4300016: G_Suelo
+    4300018: G_Suelo-Pasillo
+    4300020: G_Suelo-Pasillo-2
+    4300022: G_Plano-cilindro
+    4300024: G_Borde-Lago
+    4300026: G_Borde-Lago001
+    4300028: G_Plano-Techo1
+    4300030: G_Plano-cilindro001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
