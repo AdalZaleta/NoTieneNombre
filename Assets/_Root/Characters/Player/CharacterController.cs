@@ -6,7 +6,7 @@ namespace TAAI
 {
     public class CharacterController : MonoBehaviour
     {
-
+        public Vector3 localVelocity;
         public float SpeedMove;
         public GameObject Pivot;
         public Vector3 defaultDoge;
@@ -14,8 +14,10 @@ namespace TAAI
 
         public void MoveCharacter(float _x, float _z)
         {
+            localVelocity = transform.InverseTransformDirection(transform.GetComponent<Rigidbody>().velocity);
             ChangenRotationCharacterAt(Pivot);
-            transform.GetComponent<Rigidbody>(). velocity = new Vector3(_x * SpeedMove, gameObject.GetComponent<Rigidbody>().velocity.y, _z * SpeedMove);
+            localVelocity = new Vector3(_x * SpeedMove, 0, _z * SpeedMove);
+            transform.GetComponent<Rigidbody>().velocity = transform.TransformDirection(localVelocity);
         }
 
         private void ChangenRotationCharacterAt(GameObject _pivot)
