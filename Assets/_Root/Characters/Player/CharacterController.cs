@@ -14,8 +14,9 @@ namespace TAAI
 
         public void MoveCharacter(float _x, float _z)
         {
-            localVelocity = transform.InverseTransformDirection(transform.GetComponent<Rigidbody>().velocity);
+            
             ChangenRotationCharacterAt(Pivot);
+            localVelocity = transform.InverseTransformDirection(transform.GetComponent<Rigidbody>().velocity);
             localVelocity = new Vector3(_x * SpeedMove, 0, _z * SpeedMove);
             transform.GetComponent<Rigidbody>().velocity = transform.TransformDirection(localVelocity);
         }
