@@ -16,9 +16,16 @@ namespace TAAI
 			Principal_PJ = GameObject.FindGameObjectWithTag ("Player");
 		}
 
-
 		public void MoveCharacter(float _x, float _y)
 		{
+            if (Principal_PJ)
+            {
+                Debug.Log("Principal_PJ active");
+            }
+            if (Principal_PJ.GetComponent<CharacterController>())
+            {
+                Debug.Log("CharacterController Script active");
+            }
             Principal_PJ.GetComponent<CharacterController>().MoveCharacter(_x, _y);
 		}
 	}

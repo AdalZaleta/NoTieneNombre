@@ -15,12 +15,12 @@ namespace TAAI
         public void MoveCharacter(float _x, float _z)
         {
             ChangenRotationCharacterAt(Pivot);
-            transform.GetComponent<Rigidbody>().velocity = new Vector3(_x * SpeedMove, gameObject.GetComponent<Rigidbody>().velocity.y, _z * SpeedMove);
+            transform.GetComponent<Rigidbody>(). velocity = new Vector3(_x * SpeedMove, gameObject.GetComponent<Rigidbody>().velocity.y, _z * SpeedMove);
         }
 
         private void ChangenRotationCharacterAt(GameObject _pivot)
         {
-            transform.LookAt(_pivot.transform.forward,Vector3.up);
+            transform.LookAt(new Vector3(_pivot.transform.position.x, transform.position.y, _pivot.transform.position.z));
         }
 
         public void DogeAction(bool _moving)
