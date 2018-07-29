@@ -13,8 +13,9 @@ namespace TAAI
         public Vector3 dogeLateral;
 
         public void MoveCharacter(float _x, float _z)
-        {
+        {     
             ChangenRotationCharacterAt(Pivot);
+            localVelocity = transform.InverseTransformDirection(transform.GetComponent<Rigidbody>().velocity);
             localVelocity = new Vector3(_x * SpeedMove, 0, _z * SpeedMove);
             transform.GetComponent<Rigidbody>().velocity = transform.TransformDirection(localVelocity);
         }
