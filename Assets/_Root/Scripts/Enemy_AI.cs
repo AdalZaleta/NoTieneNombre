@@ -20,7 +20,6 @@ namespace TAAI
             {
                 if (canFollow)
                 {
-                    Debug.Log("PLAYER ENTERED");
                     gotTarget = true;
                 }  
             }
@@ -34,10 +33,8 @@ namespace TAAI
 
         void Update()
         {
-            Debug.Log("Distance from OG: " + Vector3.Distance(transform.position, OG_pos));
             if (Vector3.Distance(transform.position, OG_pos) >= maxDistance)
             {
-                Debug.Log("TOO FAR");
                 agent.destination = OG_pos;
                 FollowCD(2.0f);
                 if (canFollow)
@@ -49,7 +46,6 @@ namespace TAAI
             {
                 if (gotTarget)
                 {
-                    Debug.Log("FOLLOWING PLAYER");
                     agent.destination = player.transform.position;
                 }
             }
