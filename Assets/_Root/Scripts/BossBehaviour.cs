@@ -49,6 +49,7 @@ namespace TAAI
         void Start()
         {
             rig = GetComponent<Rigidbody>();
+            HP = 100;
         }
 
         private void FixedUpdate()

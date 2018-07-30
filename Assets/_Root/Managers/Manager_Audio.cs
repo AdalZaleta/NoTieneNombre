@@ -17,7 +17,7 @@ namespace TAAI
 
 		void Start()
 		{
-			if (Manager_Static.appManager.currentState == AppState.main_menu)
+			if (Manager_Static.appManager.currentState == AppState.main_menu && main_menu)
 				playMusic (main_menu);
 		}
 
