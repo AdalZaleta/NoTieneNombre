@@ -31,6 +31,7 @@ namespace TAAI
 				}
                 if (Input.GetButtonDown("Fire2")) {
                     Debug.Log("Dandole Fire2");
+                    Manager_Static.animacionesPersonajes.setDamage();
                 }
 				if (Input.GetKeyUp (KeyCode.JoystickButton7)) {
 					Manager_Static.appManager.SetPause ();

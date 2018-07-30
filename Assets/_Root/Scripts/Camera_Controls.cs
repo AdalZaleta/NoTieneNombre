@@ -100,7 +100,7 @@ namespace TAAI
 
             // Implicit AutoFocus Input
             // Can Remove | After Input Manager Calls Method
-            if (Input.GetKeyDown(KeyCode.O))
+            if (Input.GetButtonDown("Jump"))
             {
                 AutoFocus();
             }
