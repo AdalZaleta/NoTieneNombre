@@ -27,5 +27,6 @@ namespace TAAI
 		public static Manager_Scene sceneManager;
 		public static Manager_Audio audioManager;
 		public static Manager_UI uiManager;
+        public static Animations animacionesPersonajes;
 	}
 }

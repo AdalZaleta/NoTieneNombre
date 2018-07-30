@@ -25,7 +25,8 @@ namespace TAAI
 			else if (Manager_Static.appManager.currentState == AppState.main_menu) {
 			}
 			else if (Manager_Static.appManager.currentState == AppState.gameplay) {
-				if (Input.GetAxisRaw ("Horizontal") != 0.0f || Input.GetAxisRaw ("Vertical") != 0.0f) {
+                Manager_Static.animacionesPersonajes.setVelocitys(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+                if (Input.GetAxisRaw ("Horizontal") != 0.0f || Input.GetAxisRaw ("Vertical") != 0.0f) {
                     Manager_Static.controllerManager.MoveCharacter(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 				}
                 if (Input.GetButtonDown("Fire2")) {
