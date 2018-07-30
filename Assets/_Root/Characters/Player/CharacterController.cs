@@ -26,6 +26,7 @@ namespace TAAI
         public void Start()
         {
             HP = 100;
+            Alive = true;
         }
 
         public void receiveDamage()
