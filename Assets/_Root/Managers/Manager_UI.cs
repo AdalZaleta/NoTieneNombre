@@ -71,8 +71,10 @@ namespace TAAI
 
         public void BossFound()
         {
+            Debug.Log("Entered BossFound Method");
             if (!BossHP.gameObject.activeSelf)
             {
+                Debug.Log("Found Boss !");
                 BossHP.gameObject.SetActive(true);
             }
         }

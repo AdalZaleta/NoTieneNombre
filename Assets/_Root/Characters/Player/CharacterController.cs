@@ -11,8 +11,27 @@ namespace TAAI
         public GameObject Pivot;
         public Vector3 defaultDoge;
         public Vector3 dogeLateral;
+        public GameObject hand;
+        GameObject sword;
         int HP;
         bool Alive = true;
+
+        private void OnTriggerEnter(Collider _col)
+        {
+            if (_col.gameObject.CompareTag("sword"))
+            {
+                sword = _col.gameObject;
+                TakeSword();
+            }
+        }
+
+        public void TakeSword()
+        {
+            sword.transform.parent = hand.transform;
+            sword.transform.localPosition = Vector3.zero;
+            sword.transform.localRotation = Quaternion.identity;
+            sword.GetComponent<SphereCollider>().enabled = false;
+        }
 
         // TEMPORARY TESTING
         public void Update()
